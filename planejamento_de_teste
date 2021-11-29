@@ -1,0 +1,74 @@
+#encoding: UTF-8
+#language: pt
+
+@login
+Funcionalidade: Login
+ Como usuário da aplicação
+ Eu quero poder acessar as suas funcionalidades
+ Assim que inserir minhas credenciais
+
+Contexto: 
+ Dado que o usuário nunca acessou a aplicação antes
+
+Critérios de aceitação:
+
+@positivo
+Esquema do Cenário: Dados válidos
+  Dado que o usuário da aplicação esteja na tela de login
+  Quando inserir um "<e-mail>" válido
+  E inserir uma "<senha>" válida
+  E "<repetir_senha>" de forma válida 
+  E clicar no botão "<cadastrar>"
+  Então a "<mensagem_sucesso>" é exibida
+  
+Exemplos:
+    | e-mail                | senha | repetir_senha | cadastrar | mensagem_sucesso                | 
+    | rodrigo@serasa.com.br | R12*  | R12*          | true      | Cadastro realizado com sucesso! |  
+    | rodrigo@serasa.com.br | Rf1*  | Rf1*          | true      | Cadastro realizado com sucesso! |   
+    | rodrigo@serasa.com.br | 12R*  | 12R*          | true      | Cadastro realizado com sucesso! | 
+    | rodrigo@serasa.com.br | $R1*  | $R1*          | true      | Cadastro realizado com sucesso! |
+
+@negativo
+Esquema do Cenário: E-mail inválido
+  Dado que o usuário da aplicação esteja na tela de login
+  Quando inserir um "<e-mail>" inválido
+  Então a "<mensagem_validação_email>" é exibida
+  E o botão "<cadastrar>" se mantém oculto
+  
+Exemplos:
+    | e-mail                 | mensagem_validação_email       | cadastrar |
+    | rodrigo.serasa.com.br  | Informe apenas email`s válidos | false     |
+    | rodrigo@.com.br        | Informe apenas email`s válidos | false     |
+    | @serasa.com.br         | Informe apenas email`s válidos | false     |
+    | rodrigo@serasa         | Informe apenas email`s válidos | false     |
+
+@negativo
+Esquema do Cenário: Senha inválida
+  Dado que o usuário da aplicação esteja na tela de login
+  Quando inserir um "<e-mail>" válido
+  E inserir uma "<senha>" inválida
+  Então a "<mensagem_validação_senha>" é exibida
+  E o botão "<cadastrar>" se mantém oculto
+  
+Exemplos:
+    | e-mail                 | senha | mensagem_validação_senha          								                  | cadastrar |
+    | rodrigo@serasa.com.br  | 123*  | Lembre-se que deverá ser informado no mínimo 4 caracteres (Ao menos uma letra, um caractere especial e um número). | false     |
+    | rodrigo@serasa.com.br  | r123  | Lembre-se que deverá ser informado no mínimo 4 caracteres (Ao menos uma letra, um caractere especial e um número). | false     |
+    | rodrigo@serasa.com.br  | 1234  | Lembre-se que deverá ser informado no mínimo 4 caracteres (Ao menos uma letra, um caractere especial e um número). | false     |
+    | rodrigo@serasa.com.br  | R123  | Lembre-se que deverá ser informado no mínimo 4 caracteres (Ao menos uma letra, um caractere especial e um número). | false     |
+    | rodrigo@serasa.com.br  | R1*   | Lembre-se que deverá ser informado no mínimo 4 caracteres (Ao menos uma letra, um caractere especial e um número). | false     |
+
+@negativo
+Esquema do Cenário: Repetir senha inválida
+  Dado que o usuário da aplicação esteja na tela de login
+  Quando inserir um "<e-mail>" válido
+  E inserir uma "<senha>" válida
+  E "<repetir_senha>" de forma inválida 
+  Então a "<mensagem_validação_senha>" é exibida
+  E o botão "<cadastrar>" se mantém oculto
+  
+Exemplos:
+    | e-mail                 | senha | repetir_senha | mensagem_validação_senha          									          | cadastrar |
+    | rodrigo@serasa.com.br  | R12*  | R21*          | Lembre-se que deverá ser informado no mínimo 4 caracteres (Ao menos uma letra, um caractere especial e um número). | false     |
+    | rodrigo@serasa.com.br  | R12*  | R12$          | Lembre-se que deverá ser informado no mínimo 4 caracteres (Ao menos uma letra, um caractere especial e um número). | false     |
+    | rodrigo@serasa.com.br  | R12*  | F12*          | Lembre-se que deverá ser informado no mínimo 4 caracteres (Ao menos uma letra, um caractere especial e um número). | false     |
