@@ -14,6 +14,6 @@ Para automação dos testes foi escolhido o Robot Framework pelos seguintes moti
 - Documentação de fácil acesso e compreensão
 - Comunidade ativa
 
-Instalação
-Necessário ter instalado Python 2.7
-Pip (deve vir instalado por padrão)
+Instalação (pré requisitos)
+- Python (2 ou 3)
+- Pip (deve vir instalado por padrão)
