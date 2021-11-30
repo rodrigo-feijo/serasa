@@ -1,6 +1,8 @@
 #encoding: UTF-8
 #language: pt
 
+## Teste na plataforma WEB: www.serasa.com.br
+
 Critérios de aceitação:
 
 @login
@@ -41,8 +43,3 @@ Central de ajuda
  Quando realizar a busca pela Central de Ajuda
  E selecionar um dos resultados apresentados
  Então as informações necessárias são apresentadas
-
-
-
-
-
