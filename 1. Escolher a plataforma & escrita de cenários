@@ -1,0 +1,48 @@
+#encoding: UTF-8
+#language: pt
+
+Critérios de aceitação:
+
+@login
+Cenário: Validação do CPF
+#Escolhido por se tratar de segurança da informação
+ Dado que o usário da plataforma deseja acessar a área do cliente
+ Quando inserir suas credenciais válidas
+ Então a área logada é apresentada
+ 
+@login
+Cenário: Esqueci minha senha
+#Escolhido por se tratar de segurança da informação
+ Dado que o usário da plataforma deseja acessar a área do cliente
+ Quando inserir seu CPF
+ E acessar a tela de recuperação de senha
+ E inserir o código enviado ao seu aparelho celular
+ Então uma nova senha deve ser cadastrada
+ 
+@negativo
+Cenário: Consultar CPF/Score (item muito buscado)
+#Escolhido por se tratar de uma funcionalidade muito utilizada
+ Dado que o usuário deseja consultar o score do seu CPF
+ Quando inserir um CPF inválido
+ Então a mensagem "CPF inválido" deve ser apresentada
+ E o botão "Continuar" se mantém desabilitado
+
+@smoke
+Cenário: Falando com a Bel
+#Garantir que as respostas condizem com a necessidade
+ Dado que o usuário deseja ter repostas rápidas através da Bel
+ Quando selecionar a opção desejada
+ Então as instruções necessárias são apresentadas
+
+@smoke
+Central de ajuda (ajuda ao usuário)
+#Cenário escolhido por se tratar de informações importantes ao cliente
+ Dado que o usuário necessita de informações
+ Quando realizar a busca pela Central de Ajuda
+ E selecionar um dos resultados apresentados
+ Então as informações necessárias são apresentadas
+
+
+
+
+
