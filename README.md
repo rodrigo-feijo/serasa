@@ -17,6 +17,7 @@ Para automação dos testes foi escolhido o Robot Framework pelos seguintes moti
 Pré requisitos
 - Python (2 ou 3)
 - Pip (deve vir instalado por padrão)
+- Chromedriver (necessário saber qual versão do chrome está instalado)
 
 Como instalar
 - No prompt de comando executar "pip install robotframework"
