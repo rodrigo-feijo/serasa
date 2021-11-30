@@ -20,7 +20,7 @@ Cenário: Esqueci minha senha
  Então uma nova senha deve ser cadastrada
  
 @negativo
-Cenário: Consultar CPF/Score (item muito buscado)
+Cenário: Consultar CPF/Score
 #Escolhido por se tratar de uma funcionalidade muito utilizada
  Dado que o usuário deseja consultar o score do seu CPF
  Quando inserir um CPF inválido
@@ -35,7 +35,7 @@ Cenário: Falando com a Bel
  Então as instruções necessárias são apresentadas
 
 @smoke
-Central de ajuda (ajuda ao usuário)
+Central de ajuda
 #Cenário escolhido por se tratar de informações importantes ao cliente
  Dado que o usuário necessita de informações
  Quando realizar a busca pela Central de Ajuda
