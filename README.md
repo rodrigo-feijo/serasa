@@ -23,6 +23,7 @@ Guia de instalação
 6. Use a IDE do seu gosto. Eu utilizei VSCode com as extensões do Python e Robot (opcionais).
 7. Instale o driver através do link: https://chromedriver.chromium.org/downloads
 8. O Chromedriver deve ser setado nas variáveis de ambiente (exemplo de local: c:\Program Files\webdrivers\chromedriver) 
+   
    Caso esteja utilizando Linux o comando para mapear é "$ export PATH="$PATH:/caminho/do/chromedriver""
   
 Comandos para executar o Robot
