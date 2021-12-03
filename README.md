@@ -27,6 +27,7 @@ Testes relacionados ao processo seletivo da Serasa
 8. O Chromedriver deve ser setado nas variáveis de ambiente (exemplo de local: c:\Program Files\webdrivers\chromedriver) 
    
    Caso esteja utilizando Linux o comando para mapear é "$ export PATH="$PATH:/caminho/do/chromedriver""
+   
 ########################################################
 
 **Guia de instalação - APP**
