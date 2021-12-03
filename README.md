@@ -1,5 +1,4 @@
 # Processo seletivo - Serasa
-Testes relacionados ao processo seletivo da Serasa
 
 **Motivos pela escolha do Robot Framework:**
 - Linguagem de alto nível (keywords)
