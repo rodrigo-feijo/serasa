@@ -46,7 +46,7 @@ Nas variáveis do sistema inserir
 
 **Configurações do Appium**
 1. Ao abrir o Appium inserir o Host "0.0.0.0" e Port "4723"
-2. Após pressionar o start e o servidor ser inicializado, clicar no inspector (lupa no lado direito superior)
+2. Após pressionar o start e o servidor ser inicializado, clicar no inspector (lupa no lado superior direito)
 3. Em desired capabilities inserir conforme abaixo
 
 ![image](https://user-images.githubusercontent.com/31934627/144534757-c31f746c-daaf-481b-92e3-f88a08eff407.png)
