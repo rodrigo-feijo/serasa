@@ -14,7 +14,7 @@ Testes relacionados ao processo seletivo da Serasa
 - Documentação de fácil acesso e compreensão
 - Comunidade ativa
 
-##########################################################################################################################################
+########################################################
 
 **Guia de instalação - WEB**
 1. Baixe e instale a última versão do Python em https://www.python.org/downloads/
@@ -27,7 +27,7 @@ Testes relacionados ao processo seletivo da Serasa
 8. O Chromedriver deve ser setado nas variáveis de ambiente (exemplo de local: c:\Program Files\webdrivers\chromedriver) 
    
    Caso esteja utilizando Linux o comando para mapear é "$ export PATH="$PATH:/caminho/do/chromedriver""
-##########################################################################################################################################
+########################################################
 
 **Guia de instalação - APP**
 1. Baixe e instale a última versão do Python em https://www.python.org/downloads/
@@ -56,7 +56,7 @@ Obs. para obter o udid do dispositivo, seja físico ou virtual, execute "adb dev
 4. Clique em "Save As" e dê um nome (para que não seja necessário ficar setando toda vez que reiniciar)
 5. Ao clicar em "Start Session" o inspector abrirá para navegação e busca de elementos
 
-##########################################################################################################################################
+########################################################
 
 **Comandos para executar o Robot**
 1. Após abrir o projeto, abrir o prompt de comando do seu SO e navegar até a pasta que estão os executáveis (.robot)
